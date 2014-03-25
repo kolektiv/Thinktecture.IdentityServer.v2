@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.min.css" /> 
+    @Scripts.Render("~/bundles/js/modernizr")
+    @*@Styles.Render("~/bundles/css/site")*@
+    @*@RenderSection("styles", false)*@
+    <style>
+        .signin-header
+        {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .navbar
+        {
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-inverse">
+        <div class="container signin-header">
+            <a href="#" class="pull-left">
+                <img src="@Url.Content("~/Content/images/15below-logo.png")" alt="Logo" />
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+
+        <section id="main-section">
+            @RenderBody()
+        </section>
+
+        @Scripts.Render("~/bundles/js/jquery")
+        @RenderSection("scripts", false)
+    </div>
+</body>
+</html>
